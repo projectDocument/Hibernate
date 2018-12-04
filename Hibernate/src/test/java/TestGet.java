@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 public class TestGet {
     public static void main(String[] args) {
         /*构建Configuration实例*/
-            Configuration configure = new Configuration().configure("hibernate.cfg.xml");
+        Configuration configure = new Configuration().configure("hibernate.cfg.xml");
             //会话工厂
         SessionFactory sessionFactory = configure.buildSessionFactory();
         //获取会话
