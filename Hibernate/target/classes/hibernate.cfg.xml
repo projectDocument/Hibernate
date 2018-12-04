@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <!--连接数据库URL-->
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1522:orcl</property>
+        <!--连接数据库驱动-->
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <!--连接数据库用户名-->
+        <property name="connection.username">scott</property>
+        <!--连接数据库用户密码-->
+        <property name="connection.password">orcl</property>
+        <!--是否把Hibernate运行时的SQL语句输出到控制台，编码阶段便于测试-->
+        <property name="show_sql">true</property>
+        <property name="current_session_context_class">thread</property>
+        <!--加载映射文件-->
+        <mapping resource="xml/Emp.hbn.xml"/>
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE hibernate-mapping PUBLIC
+                "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class table="emp" name="com.ssh.entity.Emp">
+    <id name="empno" column="empno">
+        <generator class="sequence">
+            <param name="sequence">seq_emp_id</param>
+        </generator>
+    </id>
+    <!--如实体类的字段和数据库相同可以不用写column-->
+    <property name="ename" column="ename"/>
+    <property name="job"/>
+    <property name="mgr"/>
+    <property name="hiredate"/>
+    <property name="sal"/>
+    <property name="comm"/>
+    <property name="deptno"/>
+</class>
+</hibernate-mapping>
